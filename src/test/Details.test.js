@@ -32,13 +32,15 @@ describe('Details component', () => {
 
     render(
       <MemoryRouter initialEntries={[{ state: { data: filteredData }, pathname: '/details' }]}>
-          <Details />
-      </MemoryRouter>
+        <Details />
+      </MemoryRouter>,
     );
 
     filteredData.forEach((item) => {
       expect(screen.getByText(item.calendarYear)).toBeInTheDocument();
-      expect(screen.getByText(item.netCashProvidedByOperatingActivities.toLocaleString())).toBeInTheDocument();
+      expect(screen.getByText(
+        item.netCashProvidedByOperatingActivities.toLocaleString()
+      )).toBeInTheDocument();
     });
   });
 });
