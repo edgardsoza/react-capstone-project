@@ -125,3 +125,14 @@ body {
 .year-breakdown {
   padding-top: 2.5rem;
 }
+
+.my-button {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  color: #fff;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  padding-right: 1rem;
+}
