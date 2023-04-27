@@ -18,8 +18,8 @@ const Header = () => {
 
 return (
   <div className='header-container'>
-    <NavLink  style={{textDecoration: 'none'}} to="/"dangerouslySetInnerHTML={{ __html: "&lt;" }} />
-    <h1>International Filings</h1>
+    <NavLink style={{textDecoration: 'none', color: '#fff'}} to="/" dangerouslySetInnerHTML={{ __html: "&lt;" }} />
+    <h3>International Filings</h3>
     <BiMicrophone />
     <FiSettings />
   </div>

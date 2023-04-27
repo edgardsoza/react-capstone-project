@@ -12,21 +12,30 @@ const Home = ( ) => {
   };
 
   return (
-  <div>
-    <h1>Stats By Year</h1>
+  <div className='main-container'>
+    <div className='image-container'>
+      <h2 className='image-title'>Company Information</h2>
+    </div>
+    <h3 className='stats-by-year'>Stats By Year</h3>
     <div className='stats-container'>
-       <ul>
-        {data.map(item => (
-          <div key={item.date} onClick={() => handleItemClick(item.date)}>
+    {data.map((item, index) => (
+    <div
+      className={index === 1 || index  === 2 ? 'item-card even' : 'item-card odd'}
+      key={item.date}
+      onClick={() => handleItemClick(item.date)}>
             <span>
             {item.calendarYear}
             <br/>
-            Net Cash <br/>
+            <br/>
+            Net Cash
+            <br/>
+            <br/>
             {item.netCashProvidedByOperatingActivities.toLocaleString()}
             </span>
-          </div>
+    </div>
         ))}
-      </ul>
+    <div className='item-card even'>
+    </div>
     </div>
   </div>
   )

@@ -3,21 +3,21 @@ import { useLocation } from 'react-router-dom';
 
 const Details = () => {
   const location = useLocation();
-  const filteredData = location.state.data;
+  const filteredData = location.state && location.state.data ? location.state.data : [];
   
   return (
     <div className='details-container'>
       {filteredData.map(item => (
         <div className='details-year-container' key={item.date}>
           <div className='details-title-container'>
-            <h2 className='details-title-year'>{item.calendarYear}</h2>
-            <h2 className='details-title-net'>{item.netCashProvidedByOperatingActivities.toLocaleString()}</h2>
+            <h2 className='details-title-year'>Year : {item.calendarYear}</h2>
+            <h2 className='details-title-net'>Net Cash : {item.netCashProvidedByOperatingActivities.toLocaleString()}</h2>
           </div>
           <div className='details-year-information'>
           <table className='table-details'>
-            <thead>
-              <tr className='item-breakdown' style={{'color':'red'}}>
-                <td>Year Breakdown - {item.calendarYear}</td>
+            <thead className='table-head'>
+              <tr className='item-breakdown'>
+                <td className='year-breakdown'>Year Breakdown - {item.calendarYear}</td>
               </tr>  
             </thead>
             <tbody className='table-body'>
@@ -54,7 +54,9 @@ const Details = () => {
               <tr className='even'>
               <td>See full report:</td>
               <td>
-              {item.finalLink}
+              <a className='final-link' href={item.finalLink}>
+                Click here
+              </a>
               </td>
               </tr>
             </tbody>
