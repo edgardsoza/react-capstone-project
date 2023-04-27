@@ -35,7 +35,7 @@ const Home = () => {
             </span>
           </div>
         ))}
-      <div className="item-card even" />
+        <div className="item-card even" />
       </div>
     </div>
   );

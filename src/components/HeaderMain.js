@@ -4,6 +4,7 @@ import { BiMicrophone } from 'react-icons/bi';
 import { FiSettings } from 'react-icons/fi';
 import { useDispatch } from 'react-redux';
 import fetchData from './fetchData';
+import { MdArrowBackIosNew } from 'react-icons/md';
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -18,7 +19,9 @@ const Header = () => {
 
   return (
     <div className="header-container">
-      <NavLink style={{ textDecoration: 'none', color: '#fff' }} to="/" dangerouslySetInnerHTML={{ __html: '&lt;' }} />
+      <NavLink style={{ textDecoration: 'none', color: '#fff' }} to="/">
+        <MdArrowBackIosNew />
+      </NavLink>
       <h3>International Filings</h3>
       <BiMicrophone />
       <FiSettings />
