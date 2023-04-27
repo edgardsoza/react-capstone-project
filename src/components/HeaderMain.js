@@ -3,8 +3,8 @@ import { NavLink } from 'react-router-dom';
 import { BiMicrophone } from 'react-icons/bi';
 import { FiSettings } from 'react-icons/fi';
 import { useDispatch } from 'react-redux';
-import fetchData from './fetchData';
 import { MdArrowBackIosNew } from 'react-icons/md';
+import fetchData from './fetchData';
 
 const Header = () => {
   const dispatch = useDispatch();

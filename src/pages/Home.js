@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { AiOutlineArrowRight } from 'react-icons/ai';
 
 const Home = () => {
   const data = useSelector((state) => state.rootReducer.data);
@@ -19,11 +20,10 @@ const Home = () => {
       <h3 className="stats-by-year">Stats By Year</h3>
       <div className="stats-container">
         {data.map((item, index) => (
-          <div
-            className={index === 1 || index === 2 ? 'item-card even' : 'item-card odd'}
-            key={item.date}
-            onClick={() => handleItemClick(item.date)}
-          >
+          <div className={index === 1 || index === 2 ? 'item-card even' : 'item-card odd'} key={item.date}>
+            <button onClick={() => handleItemClick(item.date)}>
+              <AiOutlineArrowRight />
+            </button>
             <span>
               {item.calendarYear}
               <br />
