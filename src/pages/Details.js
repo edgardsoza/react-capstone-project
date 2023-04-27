@@ -18,10 +18,10 @@ const Details = () => {
               <thead className="table-head">
                 <tr className="item-breakdown">
                   <td className="year-breakdown">
-                    Year Breakdown - 
+                    Year Breakdown -
                     {item.calendarYear}
                   </td>
-                </tr> 
+                </tr>
               </thead>
               <tbody className="table-body">
                 <tr className="odd">
