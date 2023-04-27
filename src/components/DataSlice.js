@@ -7,7 +7,7 @@ const reducer = (state = initialState, action) => {
     case 'SET_DATA':
       return { ...state, data: action.payload };
     default:
-    return state;
+      return state;
   }
 };
 

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { NavLink } from "react-router-dom";
+import { NavLink } from 'react-router-dom';
 import { BiMicrophone } from 'react-icons/bi';
 import { FiSettings } from 'react-icons/fi';
 import { useDispatch } from 'react-redux';
@@ -17,12 +17,12 @@ const Header = () => {
   }, [dispatch]);
 
   return (
-  <div className="header-container">
-    <NavLink style={ {textDecoration: 'none', color: '#fff'} } to="/" dangerouslySetInnerHTML={{ __html: '&lt;' }} />
-    <h3>International Filings</h3>
-    <BiMicrophone />
-    <FiSettings />
-  </div>
+    <div className="header-container">
+      <NavLink style={{ textDecoration: 'none', color: '#fff' }} to="/" dangerouslySetInnerHTML={{ __html: '&lt;' }} />
+      <h3>International Filings</h3>
+      <BiMicrophone />
+      <FiSettings />
+    </div>
   );
 };
 
