@@ -9,10 +9,10 @@ const App = () => (
   <>
     <BrowserRouter>
       <HeaderMain />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/details" element={<Details />} />
-        </Routes>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/details" element={<Details />} />
+      </Routes>
     </BrowserRouter>
   </>
 );

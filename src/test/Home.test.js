@@ -20,7 +20,7 @@ describe('Home component', () => {
 });
 
 describe('filterByDate', () => {
-  const handleItemClick = (data, date) => data.filter(item => item.date === date);
+  const handleItemClick = (data, date) => data.filter((item => item.date === date));
 
   it('should return the data for a given date', () => {
     const data = [

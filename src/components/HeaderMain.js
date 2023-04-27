@@ -1,9 +1,9 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import { NavLink } from "react-router-dom";
-import { BiMicrophone } from "react-icons/bi";
-import { FiSettings } from "react-icons/fi";
+import { BiMicrophone } from 'react-icons/bi';
+import { FiSettings } from 'react-icons/fi';
 import { useDispatch } from 'react-redux';
-import { fetchData } from './fetchData';
+import fetchData from './fetchData';
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -16,14 +16,14 @@ const Header = () => {
     getData();
   }, [dispatch]);
 
-return (
-  <div className='header-container'>
-    <NavLink style={{textDecoration: 'none', color: '#fff'}} to="/" dangerouslySetInnerHTML={{ __html: "&lt;" }} />
+  return (
+  <div className="header-container">
+    <NavLink style={ {textDecoration: 'none', color: '#fff'} } to="/" dangerouslySetInnerHTML={{ __html: '&lt;' }} />
     <h3>International Filings</h3>
     <BiMicrophone />
     <FiSettings />
   </div>
-);
-}
+  );
+};
 
 export default Header;

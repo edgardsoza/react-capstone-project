@@ -36,7 +36,7 @@ body {
 .item-card {
   padding: 0.5rem;
   padding-bottom: 1rem;
-  width: 46%;
+  width: 45.5%;
   height: 9rem;
   display: flex;
   flex-direction: column;
@@ -76,10 +76,10 @@ body {
 
 .stats-by-year,
 .year-breakdown {
-  width: 100%;
+  width: 98%;
   margin-top: 0.01rem;
   height: 1.5rem;
-  padding: 0.2rem 0.01rem 0.2rem;
+  padding: 0.2rem 0.01rem 0.2rem 0.5rem;
   background-color: rgba(0, 0, 0, 0.2);
 }
 

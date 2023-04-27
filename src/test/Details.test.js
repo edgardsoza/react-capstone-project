@@ -39,7 +39,7 @@ describe('Details component', () => {
     filteredData.forEach((item) => {
       expect(screen.getByText(item.calendarYear)).toBeInTheDocument();
       expect(screen.getByText(
-        item.netCashProvidedByOperatingActivities.toLocaleString()
+        item.netCashProvidedByOperatingActivities.toLocaleString(),
       )).toBeInTheDocument();
     });
   });
