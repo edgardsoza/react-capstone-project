@@ -21,7 +21,7 @@ const Home = () => {
       <div className="stats-container">
         {data.map((item, index) => (
           <div className={index === 1 || index === 2 ? 'item-card even' : 'item-card odd'} key={item.date}>
-            <button onClick={() => handleItemClick(item.date)}>
+            <button type="button" onClick={() => handleItemClick(item.date)}>
               <AiOutlineArrowRight />
             </button>
             <span>
