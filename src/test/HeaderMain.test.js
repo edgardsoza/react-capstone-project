@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import Header from '../components/HeaderMain';
 import store from '../store';
-import { fetchData } from './fetchData.mock';
+import fetchData from './fetchData.mock';
 
 it('should dispatch a SET_DATA action', async () => {
   await fetchData();

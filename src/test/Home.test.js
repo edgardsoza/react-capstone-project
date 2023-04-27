@@ -12,7 +12,7 @@ describe('Home component', () => {
         <BrowserRouter>
           <Home />
         </BrowserRouter>
-      </Provider>
+      </Provider>,
     );
 
     expect(screen.getByText('Stats By Year')).toBeInTheDocument();
@@ -20,17 +20,15 @@ describe('Home component', () => {
 });
 
 describe('filterByDate', () => {
+  const handleItemClick = (data, date) => data.filter(item => item.date === date);
 
-    const handleItemClick = (data, date) => data.filter(item => item.date === date);
-
-    it('should return the data for a given date', () => {
-      const data = [
-        { date: '2021-01-01', value: 100 },
-        { date: '2021-02-01', value: 200 },
-        { date: '2021-03-01', value: 300 },
-      ];
-      const filteredData = handleItemClick(data, '2021-02-01');
-      expect(filteredData).toEqual([{ date: '2021-02-01', value: 200 }]);
-    });
+  it('should return the data for a given date', () => {
+    const data = [
+      { date: '2021-01-01', value: 100 },
+      { date: '2021-02-01', value: 200 },
+      { date: '2021-03-01', value: 300 },
+    ];
+    const filteredData = handleItemClick(data, '2021-02-01');
+    expect(filteredData).toEqual([{ date: '2021-02-01', value: 200 }]);
   });
-  
+});

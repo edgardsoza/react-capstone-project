@@ -10,8 +10,8 @@ const Details = () => {
       {filteredData.map(item => (
         <div className='details-year-container' key={item.date}>
           <div className='details-title-container'>
-            <h2 className='details-title-year'>Year : {item.calendarYear}</h2>
-            <h2 className='details-title-net'>Net Cash : {item.netCashProvidedByOperatingActivities.toLocaleString()}</h2>
+            <h2 className='details-title-year'>{item.calendarYear}</h2>
+            <h2 className='details-title-net'>{item.netCashProvidedByOperatingActivities.toLocaleString()}</h2>
           </div>
           <div className='details-year-information'>
           <table className='table-details'>
