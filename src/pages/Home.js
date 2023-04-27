@@ -20,23 +20,24 @@ const Home = () => {
       <div className="stats-container">
         {data.map((item, index) => (
           <div
-            className={index === 1 || index  === 2 ? "item-card even" : "item-card odd"}
+            className={index === 1 || index === 2 ? 'item-card even' : 'item-card odd'}
             key={item.date}
-            onClick={() => handleItemClick(item.date)}>
-              <span>
-                {item.calendarYear}
-                <br />
-                <br />
-                Net Cash
-                <br />
-                <br />
-                {item.netCashProvidedByOperatingActivities.toLocaleString()}
-              </span>
+            onClick={() => handleItemClick(item.date)}
+          >
+            <span>
+              {item.calendarYear}
+              <br />
+              <br />
+              Net Cash
+              <br />
+              <br />
+              {item.netCashProvidedByOperatingActivities.toLocaleString()}
+            </span>
           </div>
         ))}
       <div className="item-card even" />
+      </div>
     </div>
-  </div>
   );
 };
 
