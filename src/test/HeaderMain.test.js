@@ -11,9 +11,9 @@ it('should dispatch a SET_DATA action', async () => {
   render(
     <Provider store={store}>
       <BrowserRouter>
-        <Header fetchData={fetchData}/>
+        <Header fetchData={fetchData} />
       </BrowserRouter>
-    </Provider>
+    </Provider>,
   );
 
   expect(fetchData).toHaveBeenCalled();
